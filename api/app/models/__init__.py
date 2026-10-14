@@ -1,0 +1,41 @@
+"""Import models so metadata is complete for Alembic."""
+
+from app.models.entities import (
+    AgentConversation,
+    AgentMessage,
+    AgentToolCall,
+    AlertContact,
+    AlertLog,
+    Camera,
+    Device,
+    Event,
+    ExclusionArea,
+    Organization,
+    PricingPlan,
+    Sensor,
+    Site,
+    UsageRecord,
+    UsageReport,
+    User,
+    Zone,
+)
+
+__all__ = [
+    "AgentConversation",
+    "AgentMessage",
+    "AgentToolCall",
+    "AlertContact",
+    "AlertLog",
+    "Camera",
+    "Device",
+    "Event",
+    "ExclusionArea",
+    "Organization",
+    "PricingPlan",
+    "Sensor",
+    "Site",
+    "UsageRecord",
+    "UsageReport",
+    "User",
+    "Zone",
+]

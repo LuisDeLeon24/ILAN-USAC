@@ -1,0 +1,7 @@
+[build]
+  base = "web"
+  command = "python3 ../scripts/generate_theme.py --root .. && npm run build"
+
+[build.environment]
+  NODE_VERSION = "22"
+  PYTHON_VERSION = "3.12"

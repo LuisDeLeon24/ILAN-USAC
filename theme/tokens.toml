@@ -1,0 +1,127 @@
+# Single source of visual tokens. Generated CSS and Python read this file only.
+
+[colors]
+navy = "#0A1A3F"
+cream = "#FFEBE8"
+white = "#FFFFFF"
+cyan = "#3CC8F0"
+charcoal = "#1C1F26"
+status_online = "#2ECC71"
+
+[opacity]
+surface = 0.12
+surface_strong = 0.18
+line = 0.35
+text_secondary = 0.82
+grid = 0.05
+dashed = 0.60
+motif = 0.28
+point = 0.60
+composer = 0.78
+glow = 0.62
+glow_deep = 0.32
+cream_hint = 0.18
+aurora_idle = 0.45
+aurora_pulse = 0.72
+aurora_active = 1
+
+[layout_px]
+sidebar_width = 280
+content_max_width = 1600
+panel_radius = 16
+panel_padding = 24
+border_width = 2
+button_min_height = 48
+nav_item_height = 52
+wordmark_width = 220
+wordmark_margin = 32
+icon_tile_size = 64
+icon_tile_padding = 12
+motif_marker_size = 14
+priority_bar = 6
+grid_line = 1
+composer_radius = 24
+composer_blur = 16
+
+[layout]
+video_or_media_column_pct = 68
+aurora_height_pct = 45
+aurora_drift_pct = 14
+
+[type]
+family = "Poppins, Inter, sans-serif"
+face_family = "Poppins"
+line_height_tight = 1.1
+line_height_body = 1.45
+section_tracking_em = 0.12
+
+[type.page_title]
+size = 44
+weight = 800
+
+[type.page_subtitle]
+size = 22
+weight = 600
+
+[type.tagline]
+size = 17
+weight = 500
+
+[type.section_label]
+size = 14
+weight = 700
+
+[type.body]
+size = 17
+weight = 500
+
+[type.alert_title]
+size = 32
+weight = 700
+
+[type.alert_meta]
+size = 18
+weight = 500
+
+[type.card_title]
+size = 20
+weight = 700
+
+[type.card_meta]
+size = 16
+weight = 500
+
+[type.metric_numeral]
+size = 64
+weight = 800
+
+[type.metric_label]
+size = 13
+weight = 700
+
+[type.nav]
+size = 18
+weight = 600
+
+[type.nav_active]
+size = 18
+weight = 700
+
+[type.button]
+size = 16
+weight = 700
+
+[type.table_header]
+size = 13
+weight = 700
+
+[type.table_row]
+size = 16
+weight = 500
+
+[type.badge]
+size = 13
+weight = 700
+
+[fonts]
+weights = [500, 600, 700, 800]

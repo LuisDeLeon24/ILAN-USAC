@@ -1,0 +1,10 @@
+.git
+**/.next
+**/node_modules
+**/__pycache__
+**/.venv
+**/*.pyc
+.env
+data
+minio-data
+*.pt

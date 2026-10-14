@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-14T06:19:00.000Z",
+  "title": "Design System: Sentinel",
+  "extensions": {
+    "colorMeta": {
+      "navy": {
+        "role": "primary",
+        "displayName": "Night Watch Navy",
+        "canonical": "#0A1A3F",
+        "tonalRamp": ["#050916", "#0A1A3F", "#14285A", "#1E3A7A", "#3A5A9A", "#6A88B8", "#A3B6D4", "#E6EBF4"]
+      },
+      "cream": {
+        "role": "primary",
+        "displayName": "Signal Cream",
+        "canonical": "#FFEBE8",
+        "tonalRamp": ["#3F1C18", "#7A3A32", "#B56A60", "#D9A39C", "#F0C9C4", "#FFEBE8", "#FFF4F2", "#FFFCFB"]
+      },
+      "white": {
+        "role": "secondary",
+        "displayName": "Detection White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["#1A1A1A", "#3D3D3D", "#6B6B6B", "#9A9A9A", "#C4C4C4", "#E8E8E8", "#F5F5F5", "#FFFFFF"]
+      },
+      "cyan": {
+        "role": "tertiary",
+        "displayName": "Sightline Cyan",
+        "canonical": "#3CC8F0",
+        "tonalRamp": ["#06303A", "#0C5A6E", "#1A8AA8", "#3CC8F0", "#6AD6F4", "#98E4F8", "#C6F1FB", "#E8FAFD"]
+      },
+      "charcoal": {
+        "role": "neutral",
+        "displayName": "Senti Charcoal",
+        "canonical": "#1C1F26",
+        "tonalRamp": ["#0B0C0F", "#1C1F26", "#2C313C", "#454B5A", "#6A7182", "#9AA1B0", "#C9CDD6", "#EEF0F3"]
+      },
+      "status-online": {
+        "role": "neutral",
+        "displayName": "Link Green",
+        "canonical": "#2ECC71",
+        "tonalRamp": ["#0A3A1E", "#147A3C", "#2ECC71", "#5CDA94", "#8AE6B4", "#B4F0D0", "#D6F7E4", "#F0FCF5"]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel Mix",
+        "canonical": "#273556",
+        "tonalRamp": ["#0A1A3F", "#162448", "#273556", "#364362", "#4A5A7A", "#7A8AA4", "#B0BACC", "#E4E8F0"]
+      },
+      "panel-strong": {
+        "role": "neutral",
+        "displayName": "Hover Mix",
+        "canonical": "#364362",
+        "tonalRamp": ["#0A1A3F", "#1A2A4A", "#273556", "#364362", "#4E5E7E", "#7E8EA8", "#B4BECE", "#E6EAF2"]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Instrument Line",
+        "canonical": "color-mix(in srgb, #FFEBE8 35%, transparent)",
+        "tonalRamp": ["#0A1A3F", "#1A2A4A", "#273556", "#4A3A38", "#8A6A66", "#C4A8A4", "#FFEBE8", "#FFF6F4"]
+      },
+      "text-secondary": {
+        "role": "neutral",
+        "displayName": "Secondary Voice",
+        "canonical": "color-mix(in srgb, #FFEBE8 82%, transparent)",
+        "tonalRamp": ["#0A1A3F", "#273556", "#8A6A66", "#C4A8A4", "#E8C8C4", "#FFEBE8", "#FFF4F2", "#FFFCFB"]
+      },
+      "dashed-line": {
+        "role": "neutral",
+        "displayName": "Dashed Instrument",
+        "canonical": "color-mix(in srgb, #FFEBE8 60%, transparent)",
+        "tonalRamp": ["#0A1A3F", "#273556", "#6A4A46", "#A88884", "#D4B8B4", "#FFEBE8", "#FFF4F2", "#FFFCFB"]
+      },
+      "grid-color": {
+        "role": "neutral",
+        "displayName": "Chart Grid",
+        "canonical": "color-mix(in srgb, #FFEBE8 5%, transparent)",
+        "tonalRamp": ["#0A1A3F", "#142448", "#273556", "#364362", "#4A5A7A", "#7A8AA4", "#B0BACC", "#E4E8F0"]
+      },
+      "composer-fill": {
+        "role": "neutral",
+        "displayName": "Composer Veil",
+        "canonical": "color-mix(in srgb, #0A1A3F 78%, transparent)",
+        "tonalRamp": ["#050916", "#0A1A3F", "#14285A", "#1E3A7A", "#3A5A9A", "#6A88B8", "#A3B6D4", "#E6EBF4"]
+      },
+      "glow-blue": {
+        "role": "tertiary",
+        "displayName": "Aurora Glow",
+        "canonical": "#2985AD",
+        "tonalRamp": ["#0A1A3F", "#0C3A4E", "#1A5A72", "#2985AD", "#3CC8F0", "#6AD6F4", "#A8E8F8", "#E0F7FC"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Page titles inside the app. Pitch titles clamp upward from this size." },
+      "headline": { "displayName": "Headline", "purpose": "Alert and banner titles." },
+      "title": { "displayName": "Title", "purpose": "Uppercase card and list item titles, tracked 0.12em." },
+      "body": { "displayName": "Body", "purpose": "Running copy, form values, table rows." },
+      "label": { "displayName": "Label", "purpose": "Uppercase section labels, badges, and button-adjacent marks." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "spring", "value": "mass 1 / tension 170 / friction 27", "purpose": "Default React Spring. Settles without overshoot." },
+      { "name": "aurora-spring", "value": "mass 1 / tension 8 / friction 8", "purpose": "Senti aurora ease. No bounce." },
+      { "name": "aurora-idle", "value": "0.45", "purpose": "Idle composer fan strength." },
+      { "name": "aurora-pulse", "value": "0.72", "purpose": "Low point of the thinking pulse." },
+      { "name": "aurora-active", "value": "1", "purpose": "Full aurora while Senti is thinking." }
+    ],
+    "breakpoints": [
+      { "name": "shell-stack", "value": "1120px" },
+      { "name": "pitch-2col", "value": "40rem" },
+      { "name": "pitch-wide", "value": "64rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Highest-priority action. Cream fill, navy type. Hover does not recolor it.",
+      "html": "<button class=\"ds-btn-primary\">Entrar</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; border-radius: 16px; border: 2px solid #FFEBE8; background: #FFEBE8; color: #0A1A3F; font-family: Poppins, Inter, sans-serif; font-size: 16px; font-weight: 700; cursor: pointer; } .ds-btn-primary:hover { background: #FFEBE8; color: #0A1A3F; } .ds-btn-primary:focus-visible { outline: 2px solid #3CC8F0; outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Default action. Transparent fill, cyan stroke.",
+      "html": "<button class=\"ds-btn-outline\">Cerrar sesión</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; border-radius: 16px; border: 2px solid #3CC8F0; background: transparent; color: #FFEBE8; font-family: Poppins, Inter, sans-serif; font-size: 16px; font-weight: 700; cursor: pointer; } .ds-btn-outline:hover { background: color-mix(in srgb, #FFFFFF 18%, #0A1A3F); } .ds-btn-outline:focus-visible { outline: 2px solid #3CC8F0; outline-offset: 2px; }"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Dashed low-priority filter. Solid cyan when on.",
+      "html": "<button class=\"ds-chip\">BAJA</button><button class=\"ds-chip ds-chip-on\">CRÍTICO</button>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; border-radius: 16px; border: 2px dashed color-mix(in srgb, #FFEBE8 60%, transparent); background: transparent; color: color-mix(in srgb, #FFEBE8 82%, transparent); font-family: Poppins, Inter, sans-serif; font-size: 13px; font-weight: 700; cursor: pointer; } .ds-chip-on { border-style: solid; border-color: #3CC8F0; color: #FFEBE8; font-weight: 800; } .ds-chip:focus-visible { outline: 2px solid #3CC8F0; outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Navy well, cream stroke. Focus moves the stroke and ring to cyan.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-section-label\">Correo</span><input class=\"ds-input\" type=\"email\" placeholder=\"operador@sitio.gt\" /></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 12px; } .ds-section-label { font-family: Poppins, Inter, sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #FFEBE8; } .ds-input { width: 100%; min-height: 48px; padding: 0 12px; background: #0A1A3F; border: 2px solid #FFEBE8; border-radius: 16px; color: #FFEBE8; font-family: Poppins, Inter, sans-serif; font-size: 17px; font-weight: 500; } .ds-input::placeholder { color: color-mix(in srgb, #FFEBE8 82%, transparent); } .ds-input:focus-visible { outline: 2px solid #3CC8F0; outline-offset: 2px; border-color: #3CC8F0; }"
+    },
+    {
+      "name": "Frame",
+      "kind": "card",
+      "refersTo": "frame",
+      "description": "Opaque panel with viewfinder + ticks. Body copy lives here.",
+      "html": "<section class=\"ds-frame\"><span class=\"ds-mark ds-mark-tl\">+</span><span class=\"ds-mark ds-mark-tr\">+</span><span class=\"ds-mark ds-mark-bl\">+</span><span class=\"ds-mark ds-mark-br\">+</span><h3 class=\"ds-card-title\">Bodega norte</h3><p class=\"ds-card-meta\">Zona 12 · 4 cámaras</p></section>",
+      "css": ".ds-frame { position: relative; background: #273556; border: 2px solid color-mix(in srgb, #FFEBE8 35%, transparent); border-radius: 16px; padding: 24px; color: #FFEBE8; font-family: Poppins, Inter, sans-serif; } .ds-mark { position: absolute; font-size: 14px; font-weight: 700; line-height: 1; color: color-mix(in srgb, #FFEBE8 35%, transparent); pointer-events: none; } .ds-mark-tl { top: 12px; left: 12px; } .ds-mark-tr { top: 12px; right: 12px; } .ds-mark-bl { bottom: 12px; left: 12px; } .ds-mark-br { bottom: 12px; right: 12px; } .ds-card-title { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; } .ds-card-meta { margin: 12px 0 0; font-size: 16px; font-weight: 500; color: color-mix(in srgb, #FFEBE8 82%, transparent); }"
+    },
+    {
+      "name": "Sidebar Nav",
+      "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "Cream type on navy. Active is a cyan border, never an inverted fill.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-item\">Sitios</a><a class=\"ds-nav-item ds-nav-item-active\">Eventos</a><a class=\"ds-nav-item\">Senti</a></nav>",
+      "css": ".ds-nav { display: flex; flex-direction: column; gap: 12px; } .ds-nav-item { display: flex; align-items: center; min-height: 52px; padding: 0 12px; border: 2px solid transparent; border-radius: 16px; color: #FFEBE8; font-family: Poppins, Inter, sans-serif; font-size: 18px; font-weight: 600; text-decoration: none; } .ds-nav-item:hover { background: color-mix(in srgb, #FFFFFF 18%, #0A1A3F); } .ds-nav-item-active, .ds-nav-item-active:hover { background: transparent; border-color: #3CC8F0; font-weight: 700; } .ds-nav-item:focus-visible { outline: 2px solid #3CC8F0; outline-offset: 2px; }"
+    },
+    {
+      "name": "Critical Severity",
+      "kind": "custom",
+      "refersTo": "severity-critical",
+      "description": "Inverted cream block for CRÍTICO. At most two inverted objects on a screen.",
+      "html": "<article class=\"ds-critical\"><p class=\"ds-section-label\">CRÍTICO</p><h3 class=\"ds-card-title\">Intrusión</h3><p class=\"ds-card-meta\">Bodega norte · hace 2 min</p></article>",
+      "css": ".ds-critical { background: #FFEBE8; color: #0A1A3F; border-left: 6px solid #FFEBE8; border-radius: 16px; padding: 24px; font-family: Poppins, Inter, sans-serif; font-weight: 800; } .ds-critical .ds-section-label { font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #0A1A3F; } .ds-critical .ds-card-title { margin: 12px 0 0; font-size: 20px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #0A1A3F; } .ds-critical .ds-card-meta { margin: 12px 0 0; font-size: 16px; font-weight: 500; color: #0A1A3F; }"
+    },
+    {
+      "name": "Senti Composer",
+      "kind": "custom",
+      "refersTo": "input",
+      "description": "The only glass surface. Navy veil, aurora fan, cream type. Pinned to the assistant panel.",
+      "html": "<div class=\"ds-composer\"><div class=\"ds-aurora\"></div><textarea class=\"ds-senti-field\" placeholder=\"Pregúntame qué pasó…\"></textarea><div class=\"ds-senti-tools\"><button class=\"ds-senti-icon\" aria-label=\"Micrófono\">+</button><button class=\"ds-senti-send\">Enviar</button></div></div>",
+      "css": ".ds-composer { position: relative; display: flex; flex-direction: column; gap: 12px; padding: 12px; border-radius: 24px; border: 1px solid color-mix(in srgb, #FFEBE8 35%, transparent); background: color-mix(in srgb, #0A1A3F 78%, transparent); backdrop-filter: blur(16px); font-family: Poppins, Inter, sans-serif; } .ds-composer:focus-within { outline: 2px solid #3CC8F0; outline-offset: 2px; } .ds-aurora { position: absolute; left: 0; right: 0; bottom: 0; height: 45%; pointer-events: none; border-radius: 0 0 24px 24px; background-image: linear-gradient(90deg, transparent, #3CC8F0 50%, transparent), radial-gradient(ellipse 88% 115% at 50% 108%, #3CC8F0 0%, transparent 72%), radial-gradient(ellipse 120% 140% at 38% 112%, #2985AD 0%, transparent 78%); background-size: 100% 2px, 100% 100%, 100% 100%; background-position: center bottom, center, center; background-repeat: no-repeat; opacity: 0.45; } .ds-senti-field { position: relative; z-index: 1; width: 100%; min-height: 49px; border: none; background: transparent; color: #FFEBE8; font-size: 17px; font-weight: 500; resize: none; } .ds-senti-field::placeholder { color: color-mix(in srgb, #FFEBE8 82%, transparent); } .ds-senti-field:focus { outline: none; } .ds-senti-tools { position: relative; z-index: 1; display: flex; align-items: center; gap: 12px; } .ds-senti-icon { width: 48px; height: 48px; border-radius: 50%; border: 2px solid color-mix(in srgb, #FFEBE8 35%, transparent); background: color-mix(in srgb, #0A1A3F 78%, transparent); color: #FFEBE8; } .ds-senti-send { margin-left: auto; min-height: 48px; padding: 0 24px; border-radius: 16px; border: 2px solid #3CC8F0; background: transparent; color: #FFEBE8; font-size: 16px; font-weight: 700; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Night Watch Plat",
+    "overview": "Sentinel is a night operations floor. The canvas is deep navy, the instruments are cream, and cyan is a sightline — never a surface. The public pitch sits on a sparse city plat: thin cyan streets, a few blocks, a handful of glowing points. Inside the app that plat disappears. Authenticated work happens on plain navy, in opaque panels, with viewfinder + ticks at the corners.\n\nThe system is futuristic, minimal, confident, and premium. It reads as deep-tech security infrastructure, not as a generic admin template. Hierarchy comes from inversion, weight, border style, and marker shape — never from a seventh color. Motion is sparse and mechanical: a spring that settles without bounce, an aurora that lives only inside Senti's composer, and a hero animation that pauses when the visitor prefers reduced motion.\n\nCopy is Spanish. Tokens live once in theme/tokens.toml and generate CSS and Python. No hex, pixel, or weight is authored anywhere else.",
+    "keyCharacteristics": [
+      "Exactly six colors. Cyan is a line. Charcoal and link-green are locked to one surface each.",
+      "Cream on navy is the voice. White is reserved for the wordmark, metric numerals, and detection outlines.",
+      "Inverted cream blocks are the highest-priority objects on a screen — at most two at once.",
+      "Flat surfaces. No drop shadows. Depth is tonal: navy, then a 12% white mix, then a cream stroke at 35%.",
+      "Poppins 500–800 only. Nothing below 13px. Section labels and card titles are uppercase and tracked.",
+      "Viewfinder + marks on panels. City plat only on the public pitch, never behind dense text, never inside the app."
+    ],
+    "rules": [
+      { "name": "The Six Colors Rule", "body": "No red, orange, yellow, purple, gray, or any color outside these six. Severity is weight, border, inversion, and marker shape.", "section": "colors" },
+      { "name": "The Cyan Is a Line Rule", "body": "Cyan is allowed only for outlines, active borders, focus rings, thin lines, and small highlights. It stays out of the 60/25/15 navy–cream–white balance.", "section": "colors" },
+      { "name": "The Inversion Rule", "body": "Solid cream + navy text is reserved for the highest-priority objects: a critical alert, the most important list item, and primary buttons. The active nav item is a cyan border, not an inverted fill. At most two inverted blocks on a screen.", "section": "colors" },
+      { "name": "The Weight Floor Rule", "body": "Never use a weight below 500 or a size below 13px. Scope Poppins to text so icon fonts do not render as literal words.", "section": "typography" },
+      { "name": "The Flat Operations Rule", "body": "Surfaces are flat at rest. No shadow on buttons, cards, type, or the sidebar. Glow is a city-plat privilege, not a hover effect.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do pull every color, size, and weight from theme/tokens.toml (or the generated CSS variables).",
+      "Do keep cyan as a 2px line: outlines, focus, active nav, plat streets.",
+      "Do invert cream for the one or two highest-priority objects on a screen.",
+      "Do put body copy, lists, forms, and the assistant thread inside opaque frames.",
+      "Do use ● ◐ ○ plus a Spanish label for event status.",
+      "Do leave 32px around the wordmark and never tile it on login.",
+      "Do honor prefers-reduced-motion: reduce — still aurora, no hero loop, instant pitch scroll."
+    ],
+    "donts": [
+      "Don't introduce a seventh color, a severity red, or a default shadcn palette.",
+      "Don't fill a large surface with cyan, or stroke cyan on cream.",
+      "Don't put the city plat inside the app, on login, on the sidebar, or behind unpaneled body copy.",
+      "Don't use glass, blur, or a gradient outside .senti-composer.",
+      "Don't drop-shadow buttons, cards, or type.",
+      "Don't recreate, recolor, or redraw the wordmark or the icon mark.",
+      "Don't set type below 13px or weight below 500.",
+      "Don't invert more than two blocks, or invert the active nav item.",
+      "Don't write UI copy in English."
+    ]
+  }
+}

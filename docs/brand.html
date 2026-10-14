@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sentinel — Brand book</title>
+  <link rel="icon" href="../assets/brand/sentinel-favicon.png" />
+  <style>
+    @font-face { font-family: Poppins; font-style: normal; font-weight: 500; font-display: swap; src: url("../assets/fonts/poppins-latin-500-normal.woff2") format("woff2"); }
+    @font-face { font-family: Poppins; font-style: normal; font-weight: 600; font-display: swap; src: url("../assets/fonts/poppins-latin-600-normal.woff2") format("woff2"); }
+    @font-face { font-family: Poppins; font-style: normal; font-weight: 700; font-display: swap; src: url("../assets/fonts/poppins-latin-700-normal.woff2") format("woff2"); }
+    @font-face { font-family: Poppins; font-style: normal; font-weight: 800; font-display: swap; src: url("../assets/fonts/poppins-latin-800-normal.woff2") format("woff2"); }
+    :root {
+      --sentinel-navy: #0A1A3F;
+      --sentinel-cream: #FFEBE8;
+      --sentinel-white: #FFFFFF;
+      --sentinel-cyan: #3CC8F0;
+      --sentinel-charcoal: #1C1F26;
+      --sentinel-status-online: #2ECC71;
+      --opacity-surface: 0.12;
+      --opacity-surface-strong: 0.18;
+      --opacity-line: 0.35;
+      --opacity-text-secondary: 0.82;
+      --opacity-grid: 0.05;
+      --opacity-dashed: 0.6;
+      --opacity-motif: 0.28;
+      --opacity-point: 0.6;
+      --opacity-composer: 0.78;
+      --opacity-glow: 0.62;
+      --opacity-cream-hint: 0.18;
+      --opacity-aurora-idle: 0.45;
+      --surface: color-mix(in srgb, var(--sentinel-white) 12%, transparent);
+      --surface-strong: color-mix(in srgb, var(--sentinel-white) 18%, transparent);
+      --line: color-mix(in srgb, var(--sentinel-cream) 35%, transparent);
+      --text-secondary: color-mix(in srgb, var(--sentinel-cream) 82%, transparent);
+      --grid-color: color-mix(in srgb, var(--sentinel-cream) 5%, transparent);
+      --dashed-line: color-mix(in srgb, var(--sentinel-cream) 60%, transparent);
+      --panel: color-mix(in srgb, var(--sentinel-white) 12%, var(--sentinel-navy));
+      --panel-strong: color-mix(in srgb, var(--sentinel-white) 18%, var(--sentinel-navy));
+      --composer-fill: color-mix(in srgb, var(--sentinel-navy) 78%, transparent);
+      --glow-blue: color-mix(in srgb, var(--sentinel-cyan) 62%, var(--sentinel-navy));
+      --aurora-cream: color-mix(in srgb, var(--sentinel-cream) 18%, var(--sentinel-navy));
+      --sidebar-width: 280px;
+      --content-max-width: 1600px;
+      --panel-radius: 16px;
+      --panel-padding: 24px;
+      --border-width: 2px;
+      --button-min-height: 48px;
+      --nav-item-height: 52px;
+      --wordmark-width: 220px;
+      --wordmark-margin: 32px;
+      --icon-tile-size: 64px;
+      --icon-tile-padding: 12px;
+      --motif-marker-size: 14px;
+      --priority-bar: 6px;
+      --grid-line: 1px;
+      --composer-radius: 24px;
+      --composer-blur: 16px;
+      --video-column: 68%;
+      --aurora-height: 45%;
+      --font-family: Poppins, Inter, sans-serif;
+      --line-height-tight: 1.1;
+      --line-height-body: 1.45;
+      --section-tracking: 0.12em;
+      --size-page-title: 44px;
+      --weight-page-title: 800;
+      --size-page-subtitle: 22px;
+      --weight-page-subtitle: 600;
+      --size-tagline: 17px;
+      --weight-tagline: 500;
+      --size-section-label: 14px;
+      --weight-section-label: 700;
+      --size-body: 17px;
+      --weight-body: 500;
+      --size-alert-title: 32px;
+      --weight-alert-title: 700;
+      --size-card-title: 20px;
+      --weight-card-title: 700;
+      --size-card-meta: 16px;
+      --weight-card-meta: 500;
+      --size-metric-numeral: 64px;
+      --weight-metric-numeral: 800;
+      --size-metric-label: 13px;
+      --weight-metric-label: 700;
+      --size-nav: 18px;
+      --weight-nav: 600;
+      --weight-nav-active: 700;
+      --size-button: 16px;
+      --weight-button: 700;
+      --size-badge: 13px;
+      --weight-badge: 700;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; color-scheme: dark; }
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      font-size: var(--size-body);
+      font-weight: var(--weight-body);
+      line-height: var(--line-height-body);
+      background: var(--sentinel-navy);
+      color: var(--sentinel-cream);
+    }
+    a { color: inherit; text-decoration: none; }
+    ::selection { background: var(--sentinel-cream); color: var(--sentinel-navy); }
+    button, input, textarea, select {
+      font-family: inherit;
+      font-size: var(--size-body);
+      font-weight: var(--weight-body);
+      color: inherit;
+    }
+
+    .shell { display: flex; min-height: 100vh; }
+    .sidebar {
+      width: var(--sidebar-width);
+      flex: 0 0 var(--sidebar-width);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: var(--wordmark-margin);
+      background: var(--sentinel-navy);
+      border-right: var(--border-width) solid var(--line);
+    }
+    .wordmark-link { display: block; width: var(--wordmark-width); max-width: 100%; }
+    .wordmark { display: block; width: 100%; height: auto; }
+    .sidebar nav {
+      display: flex;
+      flex-direction: column;
+      gap: var(--icon-tile-padding);
+      margin-top: var(--panel-padding);
+      overflow: auto;
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      min-height: var(--nav-item-height);
+      padding-inline: var(--icon-tile-padding);
+      border: var(--border-width) solid transparent;
+      border-radius: var(--panel-radius);
+      font-size: var(--size-nav);
+      font-weight: var(--weight-nav);
+      color: var(--sentinel-cream);
+      background: transparent;
+      cursor: pointer;
+      text-align: left;
+      width: 100%;
+    }
+    .nav-item:hover { background: var(--surface-strong); }
+    .nav-item.active, .nav-item.active:hover {
+      background: transparent;
+      border-color: var(--sentinel-cyan);
+      font-weight: var(--weight-nav-active);
+    }
+    .sidebar-foot {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: var(--icon-tile-padding);
+      padding-top: var(--panel-padding);
+      border-top: var(--border-width) solid var(--line);
+    }
+    .canvas { flex: 1; min-width: 0; padding: var(--wordmark-margin); }
+    .canvas-inner { position: relative; z-index: 1; max-width: var(--content-max-width); }
+    .page-header { margin-bottom: var(--panel-padding); }
+    .page-title, .page-subtitle, .page-tagline, .card-title, .card-meta { margin: 0; }
+    .page-title { font-size: var(--size-page-title); font-weight: var(--weight-page-title); line-height: var(--line-height-tight); }
+    .page-subtitle { margin-top: var(--icon-tile-padding); font-size: var(--size-page-subtitle); font-weight: var(--weight-page-subtitle); }
+    .page-tagline { margin-top: var(--icon-tile-padding); font-size: var(--size-tagline); font-weight: var(--weight-tagline); color: var(--text-secondary); }
+    .section-label { font-size: var(--size-section-label); font-weight: var(--weight-section-label); letter-spacing: var(--section-tracking); text-transform: uppercase; }
+    .frame {
+      position: relative;
+      background: var(--panel);
+      border: var(--border-width) solid var(--line);
+      border-radius: var(--panel-radius);
+      padding: var(--panel-padding);
+    }
+    .mark {
+      position: absolute;
+      z-index: 1;
+      font-size: var(--motif-marker-size);
+      font-weight: var(--weight-section-label);
+      line-height: 1;
+      color: var(--line);
+      pointer-events: none;
+    }
+    .mark-tl { top: var(--icon-tile-padding); left: var(--icon-tile-padding); }
+    .mark-tr { top: var(--icon-tile-padding); right: var(--icon-tile-padding); }
+    .mark-bl { bottom: var(--icon-tile-padding); left: var(--icon-tile-padding); }
+    .mark-br { bottom: var(--icon-tile-padding); right: var(--icon-tile-padding); }
+    .stack { display: flex; flex-direction: column; gap: var(--panel-padding); }
+    .card-title { font-size: var(--size-card-title); font-weight: var(--weight-card-title); letter-spacing: var(--section-tracking); text-transform: uppercase; }
+    .card-meta { margin-top: var(--icon-tile-padding); font-size: var(--size-card-meta); font-weight: var(--weight-card-meta); color: var(--text-secondary); }
+    .row, .actions { display: flex; flex-wrap: wrap; gap: var(--icon-tile-padding); align-items: center; }
+    .field { display: flex; flex-direction: column; gap: var(--icon-tile-padding); }
+    .control {
+      width: 100%;
+      min-height: var(--button-min-height);
+      padding-inline: var(--icon-tile-padding);
+      background: var(--sentinel-navy);
+      border: var(--border-width) solid var(--sentinel-cream);
+      border-radius: var(--panel-radius);
+      color: var(--sentinel-cream);
+    }
+    .control::placeholder { color: var(--text-secondary); }
+    .control:focus-visible { border-color: var(--sentinel-cyan); }
+    .btn, .chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: var(--button-min-height);
+      padding-inline: var(--panel-padding);
+      border-radius: var(--panel-radius);
+      border: var(--border-width) solid var(--line);
+      background: transparent;
+      color: var(--sentinel-cream);
+      cursor: pointer;
+    }
+    .btn { border-color: var(--sentinel-cyan); font-size: var(--size-button); font-weight: var(--weight-button); }
+    .btn-primary, .btn-primary:hover { background: var(--sentinel-cream); color: var(--sentinel-navy); border-color: var(--sentinel-cream); }
+    .btn:hover, .chip:hover { background: var(--surface-strong); }
+    .btn-primary:hover { background: var(--sentinel-cream); }
+    .chip { font-size: var(--size-badge); font-weight: var(--weight-badge); border-style: dashed; border-color: var(--dashed-line); color: var(--text-secondary); }
+    .chip.on { border-style: solid; border-color: var(--sentinel-cyan); color: var(--sentinel-cream); font-weight: var(--weight-page-title); }
+    .btn:focus-visible, .control:focus-visible, .nav-item:focus-visible, .chip:focus-visible {
+      outline: var(--border-width) solid var(--sentinel-cyan);
+      outline-offset: var(--border-width);
+    }
+    .status-line { display: flex; align-items: center; gap: var(--icon-tile-padding); font-size: var(--size-card-meta); font-weight: var(--weight-card-meta); }
+    .status-online { color: var(--sentinel-status-online); }
+    .icon-tile {
+      width: var(--icon-tile-size);
+      height: var(--icon-tile-size);
+      padding: var(--icon-tile-padding);
+      background: var(--sentinel-cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: var(--panel-padding); }
+    .swatch { min-height: 140px; display: flex; flex-direction: column; justify-content: flex-end; padding: var(--panel-padding); border: var(--border-width) solid var(--line); border-radius: var(--panel-radius); }
+    .swatch-name { font-size: var(--size-section-label); font-weight: var(--weight-section-label); letter-spacing: var(--section-tracking); text-transform: uppercase; }
+    .swatch-meta { margin-top: 8px; font-size: var(--size-badge); font-weight: var(--weight-badge); color: var(--text-secondary); }
+    .swatch-navy { background: var(--sentinel-navy); }
+    .swatch-cream { background: var(--sentinel-cream); color: var(--sentinel-navy); }
+    .swatch-cream .swatch-meta { color: var(--sentinel-navy); }
+    .swatch-white { background: var(--sentinel-white); color: var(--sentinel-navy); }
+    .swatch-white .swatch-meta { color: var(--sentinel-navy); }
+    .swatch-cyan { background: var(--sentinel-cyan); color: var(--sentinel-navy); }
+    .swatch-cyan .swatch-meta { color: var(--sentinel-navy); }
+    .swatch-charcoal { background: var(--sentinel-charcoal); }
+    .swatch-online { background: var(--sentinel-status-online); color: var(--sentinel-navy); }
+    .swatch-online .swatch-meta { color: var(--sentinel-navy); }
+    .type-row { display: grid; grid-template-columns: 180px 1fr; gap: var(--panel-padding); align-items: baseline; padding-block: var(--icon-tile-padding); border-bottom: var(--border-width) solid var(--line); }
+    .type-row:last-child { border-bottom: none; }
+    .type-meta { font-size: var(--size-badge); font-weight: var(--weight-badge); letter-spacing: var(--section-tracking); text-transform: uppercase; color: var(--text-secondary); }
+    .severity-critical { background: var(--sentinel-cream); color: var(--sentinel-navy); font-weight: var(--weight-page-title); border-left: var(--priority-bar) solid var(--sentinel-cream); border-radius: var(--panel-radius); padding: var(--panel-padding); }
+    .severity-critical .card-title, .severity-critical .card-meta, .severity-critical .section-label { color: var(--sentinel-navy); }
+    .severity-high { color: var(--sentinel-cream); font-weight: var(--weight-page-title); border: var(--border-width) solid var(--sentinel-cream); border-left-width: var(--priority-bar); border-radius: var(--panel-radius); padding: var(--panel-padding); }
+    .severity-medium { border: var(--border-width) solid var(--sentinel-cream); border-radius: var(--panel-radius); padding: var(--panel-padding); }
+    .severity-low { color: var(--text-secondary); border: var(--border-width) dashed var(--dashed-line); border-radius: var(--panel-radius); padding: var(--panel-padding); }
+    .metric-numeral { font-size: var(--size-metric-numeral); font-weight: var(--weight-metric-numeral); line-height: var(--line-height-tight); color: var(--sentinel-white); }
+    .metric-label { margin-top: var(--icon-tile-padding); font-size: var(--size-metric-label); font-weight: var(--weight-metric-label); letter-spacing: var(--section-tracking); text-transform: uppercase; }
+    .split { display: grid; grid-template-columns: minmax(0, var(--video-column)) minmax(0, 1fr); gap: var(--panel-padding); }
+    .chat-frame { display: flex; flex-direction: column; min-height: 360px; background: var(--sentinel-charcoal); color: var(--sentinel-cream); }
+    .chat-thread { flex: 1; display: flex; flex-direction: column; gap: var(--panel-padding); }
+    .senti-composer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: var(--icon-tile-padding);
+      padding: var(--icon-tile-padding);
+      border-radius: var(--composer-radius);
+      border: var(--grid-line) solid var(--line);
+      background: var(--composer-fill);
+      backdrop-filter: blur(var(--composer-blur));
+    }
+    .senti-aurora {
+      position: absolute;
+      z-index: 0;
+      left: 0; right: 0; bottom: 0;
+      height: var(--aurora-height);
+      pointer-events: none;
+      overflow: hidden;
+      border-bottom-left-radius: var(--composer-radius);
+      border-bottom-right-radius: var(--composer-radius);
+      background-image:
+        linear-gradient(90deg, transparent, var(--sentinel-cyan) 50%, transparent),
+        radial-gradient(ellipse 88% 115% at 50% 108%, var(--sentinel-cyan) 0%, transparent 72%),
+        radial-gradient(ellipse 120% 140% at 38% 112%, var(--glow-blue) 0%, transparent 78%),
+        radial-gradient(ellipse 36% 70% at 60% 104%, var(--sentinel-cream) 0%, var(--aurora-cream) 20%, transparent 58%);
+      background-size: 100% var(--border-width), 100% 100%, 100% 100%, 100% 100%;
+      background-position: center bottom, center, center, center;
+      background-repeat: no-repeat;
+      opacity: var(--opacity-aurora-idle);
+    }
+    .senti-field, .senti-tools { position: relative; z-index: 1; }
+    .senti-field {
+      width: 100%;
+      margin: 0;
+      padding: var(--icon-tile-padding);
+      resize: none;
+      min-height: 49px;
+      border: none;
+      border-radius: var(--panel-radius);
+      background: transparent;
+      color: var(--sentinel-cream);
+    }
+    .senti-field::placeholder { color: var(--text-secondary); }
+    .senti-field:focus { outline: none; }
+    .senti-tools { display: flex; flex-wrap: wrap; align-items: center; gap: var(--icon-tile-padding); }
+    .senti-icon {
+      width: var(--button-min-height);
+      height: var(--button-min-height);
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: var(--border-width) solid var(--line);
+      background: var(--composer-fill);
+      color: var(--sentinel-cream);
+      cursor: pointer;
+    }
+    .senti-scope {
+      min-height: var(--button-min-height);
+      border-radius: calc(var(--button-min-height) / 2);
+      border: var(--border-width) solid var(--line);
+      background: var(--composer-fill);
+      color: var(--sentinel-cream);
+      padding-inline: var(--panel-padding);
+      font-size: var(--size-button);
+      font-weight: var(--weight-button);
+    }
+    .senti-send { margin-left: auto; }
+    .login-demo { display: flex; justify-content: center; padding: var(--wordmark-margin); }
+    .login-panel { width: min(100%, calc(var(--sidebar-width) * 2)); }
+    .login-wordmark { display: block; width: var(--wordmark-width); margin-inline: auto; margin-bottom: var(--wordmark-margin); }
+    .login-heading { text-align: center; }
+    .plat-stage { position: relative; min-height: 320px; overflow: hidden; border: var(--border-width) solid var(--line); border-radius: var(--panel-radius); background: var(--sentinel-navy); }
+    .city-map { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    .city-map-lines { fill: none; stroke: var(--sentinel-cyan); stroke-width: var(--grid-line); opacity: var(--opacity-motif); }
+    .city-map-points { fill: var(--sentinel-cyan); opacity: var(--opacity-point); }
+    .city-map-points circle { filter: drop-shadow(0 0 7px var(--sentinel-cyan)); }
+    .plat-copy { position: relative; z-index: 1; padding: var(--wordmark-margin); }
+    .rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--panel-padding); }
+    .rule-list { margin: 0; padding-left: 1.2em; }
+    .rule-list li + li { margin-top: var(--icon-tile-padding); }
+    .token-table { width: 100%; border-collapse: collapse; }
+    .token-table th, .token-table td { text-align: left; padding: 12px 0; border-bottom: var(--border-width) solid var(--line); vertical-align: top; }
+    .token-table th { font-size: var(--size-badge); font-weight: var(--weight-badge); letter-spacing: var(--section-tracking); text-transform: uppercase; }
+    section[id] { scroll-margin-top: var(--wordmark-margin); }
+    .hidden-brand { display: none; }
+    .balance { display: grid; grid-template-columns: 60fr 25fr 15fr; min-height: 72px; border-radius: var(--panel-radius); overflow: hidden; border: var(--border-width) solid var(--line); }
+    .balance-navy { background: var(--sentinel-navy); }
+    .balance-cream { background: var(--sentinel-cream); }
+    .balance-white { background: var(--sentinel-white); }
+    .pitch-title-demo {
+      font-size: clamp(44px, 4.4vw, 86px);
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0;
+    }
+    .pitch-title-demo::after {
+      content: "";
+      display: block;
+      width: 128px;
+      height: 1px;
+      margin-top: 12px;
+      background: var(--sentinel-cyan);
+    }
+
+    @media (max-width: 1120px) {
+      .shell { flex-direction: column; }
+      .sidebar { width: auto; height: auto; position: relative; }
+      .sidebar nav { flex-direction: row; flex-wrap: wrap; }
+      .split { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="wordmark-link" href="#identidad">
+        <img class="wordmark" src="../assets/brand/sentinel-wordmark-white.png" alt="Sentinel" />
+      </a>
+      <nav aria-label="Brand book">
+        <a class="nav-item active" href="#identidad">Identidad</a>
+        <a class="nav-item" href="#color">Color</a>
+        <a class="nav-item" href="#tipo">Tipografía</a>
+        <a class="nav-item" href="#componentes">Componentes</a>
+        <a class="nav-item" href="#severidad">Severidad</a>
+        <a class="nav-item" href="#senti">Senti</a>
+        <a class="nav-item" href="#motivo">Motivo</a>
+        <a class="nav-item" href="#reglas">Reglas</a>
+      </nav>
+      <div class="sidebar-foot">
+        <p class="section-label">Brand book</p>
+        <p class="card-meta">Tokens de theme/tokens.toml</p>
+        <p class="status-line">
+          <span class="status-online" aria-hidden="true">●</span>
+          En línea
+        </p>
+      </div>
+    </aside>
+
+    <main class="canvas">
+      <div class="canvas-inner stack">
+        <header class="page-header" id="identidad">
+          <h1 class="page-title">Brand book</h1>
+          <p class="page-subtitle">The Night Watch Plat</p>
+          <p class="page-tagline">Seis colores. Cyan es una línea. El plat queda fuera de la app.</p>
+        </header>
+
+        <section class="frame">
+          <span class="mark mark-tl" aria-hidden="true">+</span>
+          <span class="mark mark-tr" aria-hidden="true">+</span>
+          <span class="mark mark-bl" aria-hidden="true">+</span>
+          <span class="mark mark-br" aria-hidden="true">+</span>
+          <p class="section-label">Wordmark</p>
+          <div class="row" style="margin-top: 24px; align-items: center;">
+            <img class="wordmark" src="../assets/brand/sentinel-wordmark-white.png" alt="Sentinel" style="width: var(--wordmark-width);" />
+            <div class="icon-tile">
+              <img src="../assets/brand/sentinel-icon.png" alt="Icono Sentinel" style="width:100%; height:100%; object-fit:contain;" />
+            </div>
+          </div>
+          <p class="card-meta">Wordmark blanco sin tile. El icono va en tile cream de 64px solo como favicon o app icon. En login, el wordmark va solo.</p>
+        </section>
+
+        <section class="frame">
+          <span class="mark mark-tl" aria-hidden="true">+</span>
+          <span class="mark mark-tr" aria-hidden="true">+</span>
+          <span class="mark mark-bl" aria-hidden="true">+</span>
+          <span class="mark mark-br" aria-hidden="true">+</span>
+          <h2 class="pitch-title-demo">Tus cámaras ya ven. Ahora también entienden.</h2>
+          <p class="page-subtitle" style="max-width: 46ch;">Infraestructura de seguridad deep-tech. Futurista, mínima, confiada. Navy de operaciones, cream de instrumento, cyan de mira.</p>
+        </section>
+
+        <section id="color" class="stack">
+          <header class="page-header">
+            <h2 class="page-title">Color</h2>
+            <p class="page-subtitle">Exactamente seis. Nada más.</p>
+            <p class="page-tagline">Balance de pantalla: navy 60% · cream 25% · white 15%. Cyan no entra en ese balance.</p>
+          </header>
+          <div class="balance" aria-hidden="true">
+            <div class="balance-navy"></div>
+            <div class="balance-cream"></div>
+            <div class="balance-white"></div>
+          </div>
+          <div class="swatch-grid">
+            <div class="swatch swatch-navy"><div class="swatch-name">Night Watch Navy</div><div class="swatch-meta">#0A1A3F · canvas, sidebar, fields</div></div>
+            <div class="swatch swatch-cream"><div class="swatch-name">Signal Cream</div><div class="swatch-meta">#FFEBE8 · texto, bordes, primary</div></div>
+            <div class="swatch swatch-white"><div class="swatch-name">Detection White</div><div class="swatch-meta">#FFFFFF · wordmark, métricas, boxes</div></div>
+            <div class="swatch swatch-cyan"><div class="swatch-name">Sightline Cyan</div><div class="swatch-meta">#3CC8F0 · líneas, focus, activo</div></div>
+            <div class="swatch swatch-charcoal"><div class="swatch-name">Senti Charcoal</div><div class="swatch-meta">#1C1F26 · solo .chat-frame</div></div>
+            <div class="swatch swatch-online"><div class="swatch-name">Link Green</div><div class="swatch-meta">#2ECC71 · solo punto En línea</div></div>
+          </div>
+        </section>
+
+        <section id="tipo" class="frame">
+          <span class="mark mark-tl" aria-hidden="true">+</span>
+          <span class="mark mark-tr" aria-hidden="true">+</span>
+          <span class="mark mark-bl" aria-hidden="true">+</span>
+          <span class="mark mark-br" aria-hidden="true">+</span>
+          <p class="section-label">Poppins 500–800</p>
+          <div class="type-row"><span class="type-meta">44 / 800</span><p class="page-title">Título de página</p></div>
+          <div class="type-row"><span class="type-meta">32 / 700</span><p style="margin:0; font-size:32px; font-weight:700; line-height:1.1;">Título de alerta</p></div>
+          <div class="type-row"><span class="type-meta">22 / 600</span><p class="page-subtitle" style="margin:0">Subtítulo de página</p></div>
+          <div class="type-row"><span class="type-meta">20 / 700</span><p class="card-title">Título de tarjeta</p></div>
+          <div class="type-row"><span class="type-meta">18 / 600</span><p style="margin:0; font-size:18px; font-weight:600;">Ítem de navegación</p></div>
+          <div class="type-row"><span class="type-meta">17 / 500</span><p style="margin:0">Cuerpo. El video nunca sale de tus instalaciones.</p></div>
+          <div class="type-row"><span class="type-meta">16 / 700</span><p style="margin:0; font-size:16px; font-weight:700;">Etiqueta de botón</p></div>
+          <div class="type-row"><span class="type-meta">14 / 700</span><p class="section-label" style="margin:0">Etiqueta de sección</p></div>
+          <div class="type-row"><span class="type-meta">13 / 700</span><p class="metric-label" style="margin:0">Minutos analizados</p></div>
+          <div class="type-row"><span class="type-meta">64 / 800</span><p class="metric-numeral" style="margin:0">1,284</p></div>
+        </section>
+
+        <section id="componentes" class="stack">
+          <header class="page-header">
+            <h2 class="page-title">Componentes</h2>
+            <p class="page-subtitle">Instrumentos planos. Cyan solo en el trazo.</p>
+          </header>
+          <div class="frame">
+            <span class="mark mark-tl" aria-hidden="true">+</span>
+            <span class="mark mark-tr" aria-hidden="true">+</span>
+            <span class="mark mark-bl" aria-hidden="true">+</span>
+            <span class="mark mark-br" aria-hidden="true">+</span>
+            <p class="section-label">Botones y chips</p>
+            <div class="row" style="margin-top: 24px;">
+              <button class="btn btn-primary" type="button">Entrar</button>
+              <button class="btn" type="button">Cerrar sesión</button>
+              <button class="chip" type="button">BAJA</button>
+              <button class="chip on" type="button">CRÍTICO</button>
+            </div>
+          </div>
+          <div class="split">
+            <div class="frame">
+              <span class="mark mark-tl" aria-hidden="true">+</span>
+              <span class="mark mark-tr" aria-hidden="true">+</span>
+              <span class="mark mark-bl" aria-hidden="true">+</span>
+              <span class="mark mark-br" aria-hidden="true">+</span>
+              <form class="stack" onsubmit="return false">
+                <label class="field">
+                  <span class="section-label">Correo</span>
+                  <input class="control" type="email" placeholder="operador@sitio.gt" />
+                </label>
+                <label class="field">
+                  <span class="section-label">Contraseña</span>
+                  <input class="control" type="password" placeholder="••••••••" />
+                </label>
+                <button class="btn btn-primary" type="button">Entrar</button>
+              </form>
+            </div>
+            <div class="frame">
+              <span class="mark mark-tl" aria-hidden="true">+</span>
+              <span class="mark mark-tr" aria-hidden="true">+</span>
+              <span class="mark mark-bl" aria-hidden="true">+</span>
+              <span class="mark mark-br" aria-hidden="true">+</span>
+              <p class="section-label">Métrica</p>
+              <p class="metric-numeral">428</p>
+              <p class="metric-label">Minutos analizados</p>
+              <p class="card-meta">Blanco solo en el numeral. La etiqueta es cream, 13 / 700, mayúsculas.</p>
+            </div>
+          </div>
+          <div class="login-demo">
+            <section class="frame login-panel">
+              <span class="mark mark-tl" aria-hidden="true">+</span>
+              <span class="mark mark-tr" aria-hidden="true">+</span>
+              <span class="mark mark-bl" aria-hidden="true">+</span>
+              <span class="mark mark-br" aria-hidden="true">+</span>
+              <div class="stack">
+                <img class="login-wordmark" src="../assets/brand/sentinel-wordmark-white.png" alt="Sentinel" />
+                <header class="login-heading">
+                  <h2 class="page-title">Iniciar sesión</h2>
+                  <p class="page-subtitle">Acceso al centro de monitoreo</p>
+                  <p class="page-tagline">Ingresa con la cuenta de tu organización.</p>
+                </header>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section id="severidad" class="stack">
+          <header class="page-header">
+            <h2 class="page-title">Severidad</h2>
+            <p class="page-subtitle">Sin rojo. Sin naranja. Sin un séptimo color.</p>
+            <p class="page-tagline">El estado usa forma: ● nuevo · ◐ en revisión · ○ resuelto.</p>
+          </header>
+          <article class="severity-critical">
+            <p class="section-label">CRÍTICO</p>
+            <h3 class="card-title">Intrusión</h3>
+            <p class="card-meta">Bodega norte · hace 2 min · ● Nuevo</p>
+          </article>
+          <article class="severity-high">
+            <p class="section-label">ALTA</p>
+            <h3 class="card-title">Fuera de horario</h3>
+            <p class="card-meta">Acceso principal · hace 11 min · ◐ En revisión</p>
+          </article>
+          <article class="severity-medium">
+            <p class="section-label">MEDIA</p>
+            <h3 class="card-title">Merodeo</h3>
+            <p class="card-meta">Estacionamiento · hace 34 min · ○ Resuelto</p>
+          </article>
+          <article class="severity-low">
+            <p class="section-label">BAJA</p>
+            <h3 class="card-title" style="text-decoration: line-through;">Movimiento</h3>
+            <p class="card-meta">○ Falso positivo</p>
+          </article>
+        </section>
+
+        <section id="senti" class="frame chat-frame">
+          <span class="mark mark-tl" aria-hidden="true">+</span>
+          <span class="mark mark-tr" aria-hidden="true">+</span>
+          <span class="mark mark-bl" aria-hidden="true">+</span>
+          <span class="mark mark-br" aria-hidden="true">+</span>
+          <p class="section-label">Senti</p>
+          <div class="chat-thread" style="margin-top: 24px;">
+            <p class="card-meta">Hola, soy Senti. Pregúntame qué pasó en tus sitios.</p>
+            <p style="margin:0; border: 2px solid var(--line); border-radius: 16px; padding: 12px;">¿Cuántas intrusiones hubo esta semana en la bodega?</p>
+          </div>
+          <div class="senti-composer" style="margin-top: 24px;">
+            <div class="senti-aurora" aria-hidden="true"></div>
+            <textarea class="senti-field" placeholder="Pregúntame qué pasó…"></textarea>
+            <div class="senti-tools">
+              <button class="senti-icon" type="button" aria-label="Adjuntar">+</button>
+              <select class="senti-scope" aria-label="Sitio">
+                <option>Todos los sitios</option>
+                <option>Bodega norte</option>
+              </select>
+              <button class="btn senti-send" type="button">Enviar</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="motivo" class="stack">
+          <header class="page-header">
+            <h2 class="page-title">Motivo</h2>
+            <p class="page-subtitle">Plat de ciudad solo en el pitch público.</p>
+            <p class="page-tagline">Calles cyan al 28%. Puntos con glow. Nunca detrás de texto denso. Nunca dentro de la app.</p>
+          </header>
+          <div class="plat-stage">
+            <svg class="city-map" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <g class="city-map-lines">
+                <path d="M0 110H1200 M0 250H1200 M0 430H1200 M0 610H1200 M0 740H1200" />
+                <path d="M90 0V800 M250 0V800 M460 0V800 M700 0V800 M940 0V800 M1100 0V800" />
+                <path d="M90 180H460 M250 110V430 M460 340H940 M700 250V610 M940 430V740" />
+                <rect x="250" y="110" width="210" height="140" />
+                <rect x="700" y="250" width="240" height="180" />
+                <rect x="90" y="430" width="160" height="180" />
+              </g>
+              <g class="city-map-points">
+                <circle cx="250" cy="250" r="4" />
+                <circle cx="700" cy="110" r="3" />
+                <circle cx="940" cy="430" r="4" />
+                <circle cx="460" cy="610" r="3" />
+                <circle cx="1100" cy="180" r="3" />
+              </g>
+            </svg>
+            <div class="plat-copy">
+              <h3 class="pitch-title-demo">Las cámaras graban, pero nadie las mira todo el tiempo.</h3>
+            </div>
+          </div>
+        </section>
+
+        <section id="reglas" class="stack">
+          <header class="page-header">
+            <h2 class="page-title">Reglas</h2>
+            <p class="page-subtitle">Lo que el sistema permite y lo que no.</p>
+          </header>
+          <div class="rules">
+            <div class="frame">
+              <span class="mark mark-tl" aria-hidden="true">+</span>
+              <span class="mark mark-tr" aria-hidden="true">+</span>
+              <span class="mark mark-bl" aria-hidden="true">+</span>
+              <span class="mark mark-br" aria-hidden="true">+</span>
+              <p class="section-label">Hacer</p>
+              <ul class="rule-list">
+                <li>Leer tokens de <code>theme/tokens.toml</code>.</li>
+                <li>Cyan como línea de 2px.</li>
+                <li>Invertir cream en uno o dos objetos.</li>
+                <li>Cuerpo, listas y Senti dentro de frames opacos.</li>
+                <li>Estados con ● ◐ ○ y etiqueta en español.</li>
+                <li>32px alrededor del wordmark.</li>
+              </ul>
+            </div>
+            <div class="frame">
+              <span class="mark mark-tl" aria-hidden="true">+</span>
+              <span class="mark mark-tr" aria-hidden="true">+</span>
+              <span class="mark mark-bl" aria-hidden="true">+</span>
+              <span class="mark mark-br" aria-hidden="true">+</span>
+              <p class="section-label">No hacer</p>
+              <ul class="rule-list">
+                <li>Un séptimo color o un rojo de severidad.</li>
+                <li>Rellenar con cyan o trazar cyan sobre cream.</li>
+                <li>Plat dentro de la app, el login o el sidebar.</li>
+                <li>Glass, blur o degradado fuera de Senti.</li>
+                <li>Sombras en botones, cards o tipo.</li>
+                <li>Tipo bajo 13px o peso bajo 500.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="frame">
+            <span class="mark mark-tl" aria-hidden="true">+</span>
+            <span class="mark mark-tr" aria-hidden="true">+</span>
+            <span class="mark mark-bl" aria-hidden="true">+</span>
+            <span class="mark mark-br" aria-hidden="true">+</span>
+            <p class="section-label">Medidas</p>
+            <table class="token-table">
+              <thead>
+                <tr><th>Token</th><th>Valor</th><th>Uso</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>sidebar</td><td>280px</td><td>Columna fija</td></tr>
+                <tr><td>wordmark</td><td>220 × 32px margen</td><td>Nunca toca el borde</td></tr>
+                <tr><td>panel</td><td>16px / 24px / 2px</td><td>Radio, padding, borde</td></tr>
+                <tr><td>botón</td><td>48px</td><td>Altura mínima</td></tr>
+                <tr><td>nav</td><td>52px</td><td>Altura de ítem</td></tr>
+                <tr><td>prioridad</td><td>6px</td><td>Barra izquierda crítico / alta</td></tr>
+                <tr><td>composer</td><td>24px / 16px blur</td><td>Solo Senti</td></tr>
+                <tr><td>split</td><td>68% / resto</td><td>Video y panel secundario</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script>
+    const links = [...document.querySelectorAll(".sidebar nav .nav-item")];
+    const sections = links.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+    function setActive() {
+      let current = sections[0];
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= 120) current = section;
+      }
+      links.forEach((link) => {
+        const on = link.getAttribute("href") === "#" + current.id;
+        link.classList.toggle("active", on);
+      });
+    }
+    document.querySelector(".canvas").addEventListener("scroll", setActive, { passive: true });
+    window.addEventListener("scroll", setActive, { passive: true });
+    setActive();
+  </script>
+</body>
+</html>
