@@ -1,16 +1,6 @@
 .env
+.vercel
 node_modules/
-__pycache__/
-.venv/
-*.pt
-*.pyc
-data/videos/
-data/preview/
-data/seed/
-minio-data/
 .next/
-api/app/theme_tokens.py
-web/app/tokens.css
-worker/app/theme_tokens.py
 *.tsbuildinfo
 .cursor/

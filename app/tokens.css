@@ -1,0 +1,125 @@
+/* Visual tokens for the Sentinel pitch deck. */
+:root {
+  --sentinel-navy: #0A1A3F;
+  --sentinel-cream: #FFEBE8;
+  --sentinel-white: #FFFFFF;
+  --sentinel-cyan: #3CC8F0;
+  --sentinel-charcoal: #1C1F26;
+  --sentinel-status-online: #2ECC71;
+  --opacity-surface: 0.12;
+  --opacity-surface-strong: 0.18;
+  --opacity-line: 0.35;
+  --opacity-text-secondary: 0.82;
+  --opacity-grid: 0.05;
+  --opacity-dashed: 0.6;
+  --opacity-motif: 0.28;
+  --opacity-point: 0.6;
+  --opacity-composer: 0.78;
+  --opacity-glow: 0.62;
+  --opacity-glow-deep: 0.32;
+  --opacity-cream-hint: 0.18;
+  --opacity-aurora-idle: 0.45;
+  --opacity-aurora-pulse: 0.72;
+  --opacity-aurora-active: 1;
+  --surface: color-mix(in srgb, var(--sentinel-white) 12%, transparent);
+  --surface-strong: color-mix(in srgb, var(--sentinel-white) 18%, transparent);
+  --line: color-mix(in srgb, var(--sentinel-cream) 35%, transparent);
+  --text-secondary: color-mix(in srgb, var(--sentinel-cream) 82%, transparent);
+  --grid-color: color-mix(in srgb, var(--sentinel-cream) 5%, transparent);
+  --dashed-line: color-mix(in srgb, var(--sentinel-cream) 60%, transparent);
+  --panel: color-mix(in srgb, var(--sentinel-white) 12%, var(--sentinel-navy));
+  --panel-strong: color-mix(in srgb, var(--sentinel-white) 18%, var(--sentinel-navy));
+  --composer-fill: color-mix(in srgb, var(--sentinel-navy) 78%, transparent);
+  --glow-blue: color-mix(in srgb, var(--sentinel-cyan) 62%, var(--sentinel-navy));
+  --glow-blue-deep: color-mix(in srgb, var(--sentinel-cyan) 32%, var(--sentinel-navy));
+  --aurora-cream: color-mix(in srgb, var(--sentinel-cream) 18%, var(--sentinel-navy));
+  --sidebar-width: 280px;
+  --content-max-width: 1600px;
+  --panel-radius: 16px;
+  --panel-padding: 24px;
+  --border-width: 2px;
+  --button-min-height: 48px;
+  --nav-item-height: 52px;
+  --wordmark-width: 220px;
+  --wordmark-margin: 32px;
+  --icon-tile-size: 64px;
+  --icon-tile-padding: 12px;
+  --motif-marker-size: 14px;
+  --priority-bar: 6px;
+  --grid-line: 1px;
+  --composer-radius: 24px;
+  --composer-blur: 16px;
+  --video-column: 68%;
+  --aurora-height: 45%;
+  --aurora-drift: 14%;
+  --font-family: Poppins, Inter, sans-serif;
+  --line-height-tight: 1.1;
+  --line-height-body: 1.45;
+  --section-tracking: 0.12em;
+  --size-page-title: 44px;
+  --weight-page-title: 800;
+  --size-page-subtitle: 22px;
+  --weight-page-subtitle: 600;
+  --size-tagline: 17px;
+  --weight-tagline: 500;
+  --size-section-label: 14px;
+  --weight-section-label: 700;
+  --size-body: 17px;
+  --weight-body: 500;
+  --size-alert-title: 32px;
+  --weight-alert-title: 700;
+  --size-alert-meta: 18px;
+  --weight-alert-meta: 500;
+  --size-card-title: 20px;
+  --weight-card-title: 700;
+  --size-card-meta: 16px;
+  --weight-card-meta: 500;
+  --size-metric-numeral: 64px;
+  --weight-metric-numeral: 800;
+  --size-metric-label: 13px;
+  --weight-metric-label: 700;
+  --size-nav: 18px;
+  --weight-nav: 600;
+  --size-nav-active: 18px;
+  --weight-nav-active: 700;
+  --size-button: 16px;
+  --weight-button: 700;
+  --size-table-header: 13px;
+  --weight-table-header: 700;
+  --size-table-row: 16px;
+  --weight-table-row: 500;
+  --size-badge: 13px;
+  --weight-badge: 700;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/poppins-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/poppins-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/poppins-latin-700-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/poppins-latin-800-normal.woff2") format("woff2");
+}
