@@ -17,8 +17,11 @@ const SECTIONS = [
   { id: "equipo", label: "El equipo" },
   { id: "capital", label: "Capital" },
   { id: "demo", label: "Demo" },
+  { id: "video", label: "Video" },
   { id: "gracias", label: "Pruebalo ahora" },
 ] as const;
+
+const VIDEO_SLIDE = SECTIONS.findIndex((section) => section.id === "video");
 
 const INTRO_POINTS = ["Seguridad industrial", "Respuesta inmediata", "IA como pilar central"];
 
@@ -153,6 +156,35 @@ function IconMark() {
 
 function SlideTitle({ children }: { children: ReactNode }) {
   return <h2 className="deck-slide-title">{children}</h2>;
+}
+
+function DemoVideo({ active }: { active: boolean }) {
+  const video = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const node = video.current;
+    if (!node) {
+      return;
+    }
+    if (!active) {
+      node.pause();
+      return;
+    }
+    void node.play().catch(() => undefined);
+  }, [active]);
+
+  return (
+    <video
+      ref={video}
+      className="deck-video"
+      src="/demo.mp4"
+      controls
+      playsInline
+      preload="metadata"
+    >
+      Tu navegador no puede reproducir este video.
+    </video>
+  );
 }
 
 function MemberDisc({ member }: { member: TeamMember }) {
@@ -297,7 +329,7 @@ export default function DeckPage() {
       const target = event.target;
       if (target instanceof HTMLElement) {
         const tag = target.tagName;
-        if (tag === "INPUT" || tag === "TEXTAREA" || target.isContentEditable) {
+        if (tag === "INPUT" || tag === "TEXTAREA" || tag === "VIDEO" || target.isContentEditable) {
           return;
         }
       }
@@ -516,7 +548,11 @@ export default function DeckPage() {
         <p className="deck-center-word">Demo</p>
       </section>
 
-      <section className="deck-slide" id="gracias" data-slide="12" aria-label="Pruebalo ahora">
+      <section className="deck-slide" id="video" data-slide="12" aria-label="Video de la demo">
+        <DemoVideo active={index === VIDEO_SLIDE} />
+      </section>
+
+      <section className="deck-slide" id="gracias" data-slide="13" aria-label="Pruebalo ahora">
         <div className="deck-thanks">
           <p className="deck-cta">Pruebalo ahora</p>
           <img
