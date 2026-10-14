@@ -170,6 +170,7 @@ function DemoVideo({ active }: { active: boolean }) {
       node.pause();
       return;
     }
+    node.playbackRate = 2;
     void node.play().catch(() => undefined);
   }, [active]);
 
@@ -181,6 +182,12 @@ function DemoVideo({ active }: { active: boolean }) {
       controls
       playsInline
       preload="metadata"
+      onLoadedMetadata={(event) => {
+        event.currentTarget.playbackRate = 2;
+      }}
+      onPlay={(event) => {
+        event.currentTarget.playbackRate = 2;
+      }}
     >
       Tu navegador no puede reproducir este video.
     </video>
